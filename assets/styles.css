@@ -1,0 +1,573 @@
+/*
+Posicionamiento --> static, absolute, relative, fixed
+Modelo de caja (Box model) --> margin, border, padding, content
+Tipografía --> tipos, tamaños de fuente, etc
+Estilos visuales --> box-shadow, border-radius, gradient, etc
+Otros --> reglas CSS y más
+*/
+
+:root {
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d5;
+  --secondary-blue: #1a9af7;
+  --soft-blue: #e7f5ff;
+  --warm-black: #282623;
+  --black: #201e1c;
+  --grey: #bababa;
+  --off-white: #faf8f7;
+  --just-white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 324px;
+  height: 334px;
+  text-align: center;
+  background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+}
+
+header img {
+  width: 150px;
+  height: 24px;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.header--title-container {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  height: 218px;
+  text-align: center;
+  align-self: center;
+}
+
+.header--title-container h1 {
+  height: 78px;
+  margin-top: 14px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+
+  /* Just White */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+}
+
+.header--title-container p {
+  height: 36px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* or 129% */
+
+  text-align: center;
+
+  /* Soft Orange */
+
+  color: #ffe9d5;
+}
+
+.header--title-container a {
+  /* Button */
+
+  /* Auto layout */
+
+  position: absolute;
+  display: block;
+  top: calc(100% - 24px);
+  left: calc(50% - 114.5px);
+  padding: 12px 16px;
+  gap: 8px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  width: 229px;
+  height: 48px;
+  text-decoration: none;
+  background: #faf8f7;
+  color: #201e1c;
+  /* Sombra /Blanco */
+
+  box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border-radius: 4px;
+}
+
+.header--title-container span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url("icons/down-arrow.svg");
+}
+
+main {
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  background-color: var(--off-white);
+}
+
+.main_change_container {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.background_img {
+  height: 195px;
+  left: 68px;
+  top: 393px;
+}
+
+.main_change_container_title h2 {
+  /* H1 Mobile */
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  /* or 108% */
+
+  text-align: center;
+
+  /* Warm Black */
+
+  color: #201e1c;
+}
+
+.main_change_container_title p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 20px;
+  /* or 129% */
+
+  text-align: center;
+
+  color: #757575;
+}
+
+.main_change_container_table table {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 40px;
+}
+
+.main_change_container_table th {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ff9536;
+}
+
+.main_change_container_table td {
+  align-items: center;
+  padding: 10px 12px;
+  gap: 10px;
+  height: 39px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+
+  color: #b5b0ac;
+
+  background: #ffffff;
+  border-radius: 8px 0px 0px 0px;
+}
+
+.main_change_container_table td span {
+  display: inline-block;
+  width: 13px;
+  height: 12px;
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.main_change_container_table #up {
+  background-image: url("icons/trending-up.svg");
+}
+
+.main_change_container_table #down {
+  background-image: url("icons/trending-down.svg");
+}
+
+.main_change_container_table_footer {
+  width: 190px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.main_change_container_table_footer p {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 15px;
+
+  /* Warm Black+1 */
+
+  font-weight: bold;
+  background: #ffe9d5;
+  border-radius: 8px;
+}
+
+.main_change_container_table_footer p span {
+  color: var(--bitcoin-orange);
+}
+
+.main_change_container_table_footer img {
+  position: absolute;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.information_section {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+  margin-top: 10px;
+  background-color: var(--warm-black);
+}
+
+.information_section_box {
+  width: 100%;
+  height: 152px;
+  left: 0px;
+  top: 0px;
+
+  padding-top: 10px;
+  /* Warm Black+1 */
+
+  background: var(--black);
+  /* Sombra /Negro */
+
+  box-shadow: 0 4px 8px rgb(red, green, blue);
+  border-radius: 5px;
+}
+
+.information_section_box h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  padding-top: 10px;
+
+  /* Just White */
+
+  color: #ffffff;
+}
+
+.information_section_box h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  padding-top: 10px;
+
+  /* Just White */
+
+  color: #ffffff;
+}
+.information_section_box p {
+  color: var(--grey);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 10px;
+}
+
+.information_section_box span {
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+}
+
+.information_section_box #clock {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(icons/clock.svg);
+}
+.information_section_box #eye {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(icons/eye.svg);
+}
+
+.information_section_box #dolar {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(icons/dollar-sign.svg);
+}
+
+.information_section_box #check {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(icons/check-circle.svg);
+}
+
+.marketing {
+  width: 100%;
+  min-width: 320px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(img/bitcoinbaby2x.png);
+}
+
+.marketing h2 {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 26px;
+  padding-top: 40px;
+  /* identical to box height, or 108% */
+
+  text-align: center;
+
+  /* Just White */
+
+  color: #ffffff;
+}
+
+.plan_information_container {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+  margin: 50px 15px 0;
+}
+
+.slider_card {
+  display: flex;
+  height: 316px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.plan_information_container h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+
+  /* or 108% */
+
+  text-align: center;
+
+  /* Warm Black */
+
+  color: #201e1c;
+}
+.plan_information_container p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 20px;
+  /* or 129% */
+
+  text-align: center;
+
+  color: #757575;
+}
+
+.plan_information_container_date {
+  position: relative;
+  width: 70%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 50px auto 0;
+  padding: 0 15px;
+  background-color: var(--just-white);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.plan_information_container_date a {
+  padding: 8px;
+  gap: 10px;
+  text-decoration: none;
+  height: 31px;
+  left: 110px;
+  top: 2601px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 15px;
+
+  /* identical to box height */
+
+  text-align: center;
+
+  /* Just White */
+
+  color: #ffffff;
+  /* Bitcoin Orange */
+
+  background: #f7931a;
+  border-radius: 8px;
+}
+
+.plan_information_container_date p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  font-size: 20px;
+  /* identical to box height, or 129% */
+  font-weight: bold;
+  color: black;
+}
+
+.plan_information_container_date #number {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 63px;
+  letter-spacing: -0.08em;
+
+  color: #000000;
+}
+.plan_information_container_date span {
+  font-weight: bold;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 15px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #363636;
+}
+
+.plan_information_container_date #price {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #757575;
+}
+
+.plan_information_container_date #chose {
+  width: 151px;
+  height: 48px;
+  left: 85px;
+  top: 2792px;
+  padding: 12px 16px;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+
+  /* Warm Black */
+
+  color: #201e1c;
+  /* Off White */
+
+  background: #faf8f7;
+  /* Bitcoin Orange */
+
+  border: 2px solid #f7931a;
+  border-radius: 4px;
+}
+
+.plan_information_container_date #chose span {
+  display: inline-block;
+  width: 30px;
+  height: 12px;
+  margin-left: 10px;
+  top: -15%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(icons/orange-right-arrow.svg);
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+.footer_information div {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_information ul li {
+  list-style: none;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #ffffff;
+}
+
+.footer_information_section p {
+  white-space: unset;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 18px;
+  /* identical to box height, or 225% */
+
+  text-align: center;
+
+  /* Soft Orange */
+
+  color:var(--coffe) #ffe9d5;
+}
+
